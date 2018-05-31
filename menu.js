@@ -13,6 +13,11 @@ Container.prototype.render = function() {
   return element;
 }
 
+Container.prototype.remove = function(id) {
+  var elem = document.getElementById(id);
+  elem.parentElement.removeChild(elem);
+}
+
 function Menu(className, id, items) {
   Container.call(this);
 
