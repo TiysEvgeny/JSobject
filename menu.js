@@ -74,6 +74,6 @@ window.onload = function() {
   
   var menu = new Menu('menu', 'menu', items);
   document.body.appendChild(menu.render());
-  
+  menu.remove();
     
 }
