@@ -74,6 +74,10 @@ window.onload = function() {
   
   var menu = new Menu('menu', 'menu', items);
   document.body.appendChild(menu.render());
-  menu.remove();
+  
+  var div=new Container();
+  div.className='test';
+  document.body.appendChild(div.render());
+  div.remove();
     
 }
