@@ -13,8 +13,8 @@ Container.prototype.render = function() {
   return element;
 }
 
-Container.prototype.remove = function(id) {
-  var elem = document.getElementById(id);
+Container.prototype.remove = function() {
+  var elem = document.getElementById(this.id);
   elem.parentElement.removeChild(elem);
 }
 
@@ -73,7 +73,7 @@ window.onload = function() {
   ]
   
   var menu = new Menu('menu', 'menu', items);
-  
   document.body.appendChild(menu.render());
+  
     
 }
