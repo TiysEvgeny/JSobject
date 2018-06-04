@@ -65,6 +65,24 @@ MenuItem.prototype.render = function() {
   return li;
 }
 
+function SuperMenu(className, id, items) {
+  Menu.call(this);
+}
+SuperMenu.prototype = Object.create(Container.prototype);
+SuperMenu.prototype.render = function() {
+  var menu = document.createElement(this.tagName);
+  menu.className = this.className;
+  menu.id = this.id;
+
+  this.items.forEach(function(item) {
+    if(item instanceof MenuItem) {
+      menu.appendChild(item.render());
+    }
+  });
+
+  return menu;
+}
+
 window.onload = function() {
   var items = [
     new MenuItem('https://geekbrains.ru', 'Home'),
